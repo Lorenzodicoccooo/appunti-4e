@@ -1,0 +1,829 @@
+<html>
+    <head>
+        <title>Appunti 4E</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&family=Nunito:wght@300&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            html{
+                background: white;
+                font-family: 'Roboto', sans-serif;
+            }
+            .ball{
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                width: 100%;
+                height: 100%; 
+                background: #222224;
+                animation-name: example;
+                animation-duration: 10s;
+                border-radius: 0;
+            }
+            @keyframes example {
+                0%   {
+                    border-radius: 50%;
+                    top: -10%;
+                    left: 50%;
+                    width: 50px;
+                    height: 50px;
+                    opacity: 1;
+                    display: block;
+                }
+                15%{
+                    top: 50%;
+                    left: 50%;
+                }
+                21%{
+                    top: 48%;
+                    left: 50%;
+                }
+                28%{
+                    top: 50%;
+                    left: 50%;
+                    width: 50px;
+                    height: 50px;
+                }
+                34%{
+                    top: 50%;
+                    left: 50%;
+                    width: 100px;
+                    height: 100px;
+                }
+                38%{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                }
+                44%{
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0;
+                }
+                55%{
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0;
+                    opacity: 1;
+                    display: block;
+                }
+                56%{
+                    opacity: 0;
+                    display: none;
+                }
+            }
+            .point1{
+                position: absolute;
+                top: 52.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point2{
+                position: absolute;
+                top: 49.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point3{
+                position: absolute;
+                top: 46.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point4{
+                position: absolute;
+                top: 43.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point5{
+                position: absolute;
+                top: 40.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point6{
+                position: absolute;
+                top: 55.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point7{
+                position: absolute;
+                top: 58.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point8{
+                position: absolute;
+                top: 61.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point9{
+                position: absolute;
+                top: 52.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point10{
+                position: absolute;
+                top: 49.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point11{
+                position: absolute;
+                top: 46.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point12{
+                position: absolute;
+                top: 43.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point13{
+                position: absolute;
+                top: 40.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point14{
+                position: absolute;
+                top: 55.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point15{
+                position: absolute;
+                top: 58.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point16{
+                position: absolute;
+                top: 61.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point17{
+                position: absolute;
+                top: 64.6%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .point18{
+                position: absolute;
+                top: 37.6%;
+                left: 46%;
+                transform: translate(-50%, -50%);
+                width: 7px;
+                height: 7px;
+                background: rgba(250, 250, 250, 0.8);
+                border-radius: 50%;
+            }
+            .let1{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 44%;
+                left: 42%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .let2{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 42%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .let3{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 56%;
+                left: 42%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .let4{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 44%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .let5{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .let6{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 56%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .let7{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 44%;
+                left: 58%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .let8{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 58%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .let9{
+                font-size: 40px;
+                color: white;
+                position: absolute;
+                top: 56%;
+                left: 58%;
+                transform: translate(-50%, -50%);
+                font-weight: lighter;
+            }
+            .nuovo{
+                font-size: 13px;
+                position: absolute;
+                top: 62%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: rgba(250, 250, 250, 0.8);
+            }
+            .by{
+                font-size: 13px;
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: rgba(250, 250, 250, 0.8);
+                text-decoration: none;;
+            }
+            .intro{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #222224;
+                width: 100%;
+                height: 100%;
+                animation-name: example2;
+                animation-duration: 10s;
+            }
+            @keyframes example2 {
+                0%   {
+                    opacity: 0;
+                }
+                50%{
+                    opacity: 0;
+                }
+                60%{
+                    opacity: 1;
+                }
+            }
+            .novita{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: white;
+            }
+            .prenotazioni{
+                color: #222224;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-size: 23px;
+                font-weight: lighter;
+            }
+            .yellow{
+                color: #ffb92f;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            .prenota{
+                color: #222224;
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid #ffb92f;
+                padding: 5px 10px;
+                text-decoration: none;
+            }
+            .file{
+                position: absolute;
+                top: 200%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: #222224;
+            }
+            .files{
+                color: white;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-size: 23px;
+                font-weight: lighter;
+            }
+            .crea{
+                color: white;
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid #ffb92f;
+                padding: 5px 10px;
+                text-decoration: none;
+            }
+            .aboutus{
+                position: absolute;
+                top: 300%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #ffb92f;
+            }
+            .line{
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                width: 3px;
+                height: 0%;
+                background: #222224;
+                transition: 0.5s;
+            }
+            .appunti3e{
+                position: absolute;
+                top: 20%;
+                left: 25%;
+                transform: translate(-50%, -50%);
+                width: 25%;
+                height: 10%;
+                border: 3px solid transparent;
+                text-align: center;
+                transition: 0.5s;
+                opacity: 0;
+            }
+            .appunti4e{
+                position: absolute;
+                top: 80%;
+                right: 25%;
+                transform: translate(50%, -50%);
+                width: 25%;
+                height: 10%;
+                border: 3px solid transparent;
+                text-align: center;
+                transition: 0.5s;
+                opacity: 0;
+            }
+            .foto3e{
+                position: absolute;
+                top: 60%;
+                left: 25%;
+                transform: translate(-50%, -50%);
+                width: 25%;
+                height: 10%;
+                border: 3px solid transparent;
+                text-align: center;
+                transition: 0.5s;
+                opacity: 0;
+            }
+            .telegram{
+                position: absolute;
+                top: 40%;
+                right: 25%;
+                transform: translate(50%, -50%);
+                width: 45%;
+                height: 10%;
+                border: 3px solid transparent;
+                text-align: center;
+                transition: 0.5s;
+                opacity: 0;
+            }
+            .nomeapp{
+                font-size: 26px;
+                color: #222224;
+            }
+            .data{
+                position: relative;
+                top: -20%;
+                color: #222224;
+            }
+            .telegramapp{
+                font-size: 26px;
+                color: #222224;
+            }
+            .tdata{
+                position: relative;
+                top: -20%;
+                color: #222224;
+            }
+            .menu{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: white;
+                font-size: 30px;
+            }
+            .menudiv{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background: #222224;
+                transition: 0.5s;
+            }
+            .voci{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                display: none;
+            }
+            .voce{
+                color: white;
+                font-weight: lighter;
+                text-decoration: none;
+            }
+            .voce:hover{
+                color: #ffb92f;
+            }
+            .profilo{
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                color: white;
+                font-weight: bolder;
+                text-decoration: none;
+                display: none;
+            }
+            .profilo:hover{
+                color: #ffb92f;
+            }
+            .close{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: white;
+                font-size: 30px;
+            }
+            @media only screen and (max-width: 600px) {
+                .point1{
+                    top: 52.6%;
+                    left: 43.5%;
+                }
+                .point2{
+                    top: 49.6%;
+                    left: 43.5%;
+                }
+                .point3{
+                    top: 46.6%;
+                    left: 43.5%;
+                }
+                .point4{                    
+                    top: 43.6%;
+                    left: 43.5%;
+                }
+                .point5{
+                    display: none;
+                }
+                .point6{
+                    top: 55.6%;
+                    left: 43.5%;
+                }
+                .point7{
+                    top: 58.6%;
+                    left: 43.5%;
+                }
+                .point8{
+                    top: 61.6%;
+                    left: 43.5%;
+                }
+                .point9{
+                    top: 52.6%;
+                    left: 56.5%;
+                }
+                .point10{
+                    top: 49.6%;
+                    left: 56.5%;
+                }
+                .point11{
+                    top: 46.6%;
+                    left: 56.5%;
+                }
+                .point12{
+                    display: none;
+                }
+                .point13{
+                    display: none;
+                }
+                .point14{
+                    top: 55.6%;
+                    left: 56.5%;
+                }
+                .point15{
+                    top: 58.6%;
+                    left: 56.5%;
+                }
+                .point16{
+                    top: 61.6%;
+                    left: 56.5%;
+                }
+                .point17{
+                    top: 64.6%;
+                    left: 56.5%;
+                }
+                .point18{
+                    display: none;
+                }
+                .let1{
+                    top: 44%;
+                    left: 38%;
+                }
+                .let2{
+                    top: 50%;
+                    left: 38%;
+                }
+                .let3{
+                    top: 56%;
+                    left: 38%;
+                }
+                .let4{
+                    top: 44%;
+                    left: 50%;
+                }
+                .let5{
+                    top: 50%;
+                    left: 50%;
+                }
+                .let6{
+                    top: 56%;
+                    left: 50%;
+                }
+                .let7{
+                    top: 44%;
+                    left: 62%;
+                }
+                .let8{
+                    top: 50%;
+                    left: 62%;
+                }
+                .let9{
+                    top: 56%;
+                    left: 62%;
+                }
+                .nomeapp{
+                    position: relative;
+                    font-size: 11px;
+                    color: #222224;
+                }
+                .data{
+                    position: relative;
+                    top: -33%;
+                    font-size: 9px;
+                    color: #222224;
+                }
+                .appunti3e{
+                    height: 3%;
+                }
+                .appunti4e{
+                    height: 3%;
+                }
+                .foto3e{
+                    height: 4%;
+                }
+                .telegram{
+                    height: 4%;
+                } 
+                .telegramapp{
+                    position: relative;
+                    font-size: 11px;
+                    color: #222224;
+                }
+                .tdata{
+                    position: relative;
+                    top: -33%;
+                    font-size: 9px;
+                    color: #222224;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ball" id="ball"></div>
+        <div class="intro">
+            <div class="point1"></div>
+            <div class="point2"></div>
+            <div class="point3"></div>
+            <div class="point4"></div>
+            <div class="point5"></div>
+            <div class="point6"></div>
+            <div class="point7"></div>
+            <div class="point8"></div>
+            <div class="point9"></div>
+            <div class="point10"></div>
+            <div class="point11"></div>
+            <div class="point12"></div>
+            <div class="point13"></div>
+            <div class="point14"></div>
+            <div class="point15"></div>
+            <div class="point16"></div>
+            <div class="point17"></div>
+            <div class="point18"></div>
+            <h1 class="let1">A</h1>
+            <h1 class="let2">P</h1>
+            <h1 class="let3">P</h1>
+            <h1 class="let4">U</h1>
+            <h1 class="let5">N</h1>
+            <h1 class="let6">T</h1>
+            <h1 class="let7">I</h1>
+            <h1 class="let8">4</h1>
+            <h1 class="let9">E</h1>
+            <p class="nuovo">2.0</p>
+            <a class="by">By Lorenzo Di Cocco</a>
+        </div>
+        <div class="novita">
+                <h4 class="prenotazioni">Un nuovo modo di <l class="yellow">prenotare</l></h4>
+                <a href="prenotazioni.html" class="prenota">Scopri di piu&grave;</a>
+        </div>
+        <div class="file">
+            <h4 class="files">Un nuovo modo di creare <l class="yellow">file</l></h4>
+            <a href="file.html" class="crea">Comincia subito</a>
+        </div>
+        <div class="aboutus" id="aboutus">
+            <div class="line" id="line"></div>
+            <div class="appunti3e" id="appunti3e">
+                <h4 class="nomeapp">Nasce Appunti 3E</h4>
+                <p class="data">2021</p>
+            </div>
+            <div class="telegram" id="telegram">
+                <h4 class="telegramapp">Nasce il canale Telegram</h4>
+                <p class="tdata">2021</p>
+            </div>
+            <div class="foto3e" id="foto3e">
+                <h4 class="nomeapp">Nasce Foto 3E</h4>
+                <p class="data">2021</p>
+            </div>
+            <div class="appunti4e" id="appunti4e">
+                <h4 class="nomeapp">Nasce Appunti 4E</h4>
+                <p class="data">2022</p>
+            </div>
+        </div>
+        <a class="menu" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <div class="menudiv" id="voci">
+            <div class="voci" id="voci2">
+                <h2 class="voce">HOME</h2>
+                <a href="interrogazioni.html"><h2 class="voce">INTERROGAZIONI</h2></a>
+                <h2 class="voce">FILE</h2>
+                <h2 class="voce">NEWS</h2>
+                <h2 class="voce">APPS</h2>
+                <h2 class="voce">About Us</h2>
+            </div>
+            <h1 class="profilo" id="profilo">PROFILO</h1>
+            <a class="close" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></a>
+        </div>
+    </body>
+    <script>
+        var clientHeight = document.getElementById('aboutus').clientHeight;       
+        clientHeight = clientHeight * 3;
+        clientHeight = clientHeight - 10;
+
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > clientHeight || document.documentElement.scrollTop > clientHeight) {
+                document.getElementById("line").style.height = "100%";
+                setTimeout(() => {  document.getElementById("appunti3e").style.opacity = "1";  }, 500);
+                setTimeout(() => {  document.getElementById("telegram").style.opacity = "1";  }, 1000);
+                setTimeout(() => {  document.getElementById("foto3e").style.opacity = "1";  }, 1500);
+                setTimeout(() => {  document.getElementById("appunti4e").style.opacity = "1";  }, 2000);
+          }
+        }
+    </script>
+    <script>
+        setTimeout(() => {  document.getElementById("ball").style.display = "none";  }, 6500);
+    </script>
+    <script>
+        function openNav(){
+            document.getElementById("voci").style.width = "100%";
+            setTimeout(() => {  document.getElementById("voci2").style.display = "block";  }, 500);
+            setTimeout(() => {  document.getElementById("profilo").style.display = "block";  }, 500);
+        }
+
+        function closeNav(){
+            document.getElementById("voci").style.width = "0";
+            setTimeout(() => {  document.getElementById("voci2").style.display = "none";  }, 220);
+            setTimeout(() => {  document.getElementById("profilo").style.display = "none";  }, 220);
+        }
+    </script>
+</html>

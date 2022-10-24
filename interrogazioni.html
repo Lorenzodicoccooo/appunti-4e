@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Appunti 4E</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&family=Nunito:wght@300&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            html{
+                background: #222224;
+                font-family: 'Roboto', sans-serif;
+            }
+            .ptitle{
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #ffb92f;
+            }
+            .prenotazioni{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 35%;
+                background: transparent;
+                overflow-x: auto;
+            }
+            .prenotazione{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 3%;
+                width: 29.5%;
+                height: 90%;
+                background: black;
+                border-radius: 15px;
+            }
+            .hover{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                border-radius: 15px;
+                opacity: 0;
+            }
+            .hover:hover{
+                opacity: 1;
+            }
+            .titolo{
+                color: white;
+                font-weight: bolder;
+                position: absolute;
+                top: 60%;
+                left: 10px;
+                transform: translateY(-50%);
+            }
+            .descrizione{
+                color: white;
+                font-size: 10px;
+                font-weight: lighter;
+                position: absolute;
+                top: 70%;
+                left: 10px;
+                transform: translateY(-50%);
+            }
+            .prenota{
+                position: absolute;
+                top: 90%;
+                right: 10px;
+                transform: translateY(-50%);
+                background: white;
+                padding: 5px 10px;
+                border-radius: 30px;
+                color: black;
+                text-decoration: none;
+            }
+            @media only screen and (max-width: 600px) {
+                .hover{
+                    opacity: 1;
+                }
+                .titolo{
+                    font-size: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body onload="larghezza()">
+        <h1 class="ptitle">Prenota.</h1>
+        <div class="prenotazioni">
+            <div class="prenotazione" style='background: url("img/storia.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; ' id="nav">
+                <div class="hover">
+                    <h1 class="titolo">Storia</h1>
+                    <p class="descrizione">[11-10-2022] La guerra dei cent'anni</p>
+                    <a class="prenota" href="prenota.php">Prenota</a>
+                </div>
+            </div>
+            <div class="prenotazione" style='background: url("img/mate.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; left: 35.5%' id="nav2">
+                <div class="hover">
+                    <h1 class="titolo">Matematica</h1>
+                    <p class="descrizione">[11-10-2022] Seno e coseno, trigonometria</p>
+                    <a class="prenota" href="prenota.php">Prenota</a>
+                </div>
+            </div>
+            <div class="prenotazione" style='background: url("img/sfondo.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; left: 68%' id="nav3">
+                <div class="hover">
+                    <h1 class="titolo">Storia</h1>
+                    <p class="descrizione">[11-10-2022] La guerra dei cent'anni</p>
+                </div>
+            </div>
+            <div class="prenotazione" style='background: url("img/sfondo.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; left: 100.5%' id="nav4">
+                <div class="hover">
+                    <h1 class="titolo">Storia</h1>
+                    <p class="descrizione">[11-10-2022] La guerra dei cent'anni</p>
+                </div>
+            </div>
+        </div>
+    <script>
+        function larghezza(){
+            var width = document.body.offsetWidth
+
+            if (width < 600){
+                document.getElementById("nav").style.width = "40%";
+                document.getElementById("nav").style.left = "5%";
+                document.getElementById("nav2").style.width = "40%";
+                document.getElementById("nav2").style.left = "55%";
+                document.getElementById("nav3").style.left = "105%";
+                document.getElementById("nav3").style.width = "40%";
+                document.getElementById("nav4").style.left = "105%";
+            }
+        }
+    </script>
+    </body>
+</html>
